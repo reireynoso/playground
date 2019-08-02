@@ -23,4 +23,8 @@ const newInfo = {
 const dataBuffer = fs.readFileSync('1-json.json') //return bits and bytes
 const dataJSON = dataBuffer.toString() //converts to string
 const data = JSON.parse(dataJSON) //parses JSON to js object
+
+data.name = "Reinald"
+
+fs.writeFileSync('1-json.json', data)
 console.log(data)
